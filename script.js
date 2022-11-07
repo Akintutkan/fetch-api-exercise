@@ -37,7 +37,7 @@ const ülkeBilgisiAl = function (ülke) {
       console.log(data[0]);
       if (!data[0].borders) throw new Error('Komşu yok');
       
-      const komşu = data[0].borders[Math.floor(Math.random()*5)] //! 5 adet komşusunda bir tanesini random getirsin
+      const komşu = data[0].borders[Math.floor(Math.random()*(data[0].borders.length))] //! Toplam komşusundan bir tanesini random getirsin
       // const komşu = "qwqw" hata yakalamak için
       if (!komşu) return;
       // Ülke 2
