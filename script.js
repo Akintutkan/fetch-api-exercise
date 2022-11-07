@@ -37,7 +37,7 @@ const ülkeBilgisiAl = function (ülke) {
       console.log(data[0]);
       if (!data[0].borders) throw new Error('Komşu yok');
       
-      const komşu = data[0].borders[Math.floor(Math.random()*5)]
+      const komşu = data[0].borders[Math.floor(Math.random()*5)] //! 5 adet komşusunda bir tanesini random getirsin
       // const komşu = "qwqw" hata yakalamak için
       if (!komşu) return;
       // Ülke 2
@@ -58,22 +58,11 @@ const ülkeBilgisiAl = function (ülke) {
   // console.log(data)
 };
 
-btn.addEventListener('click', function () {
-  // const country = document.getElementById("country").value;
-  // ülkeBilgisiAl(country);
-  ülkeBilgisiAl("Turkey");
-});
 
-///!!! Bütün Ülkeleri Almak İstersek
-// //     const komşu = data.borders;
-// // if (!komşu) return;
-// // komşu.forEach(item => {
-// //   const request2 = new XMLHttpRequest();
-// //   request2.open('GET', `https://restcountries.com/v3.1/alpha/${item}`); // 2. url'in çağrılacağı yer // ve asenkron
-// //   request2.send();
-// //   request2.addEventListener('load', function () {
-// //     const [data2] = JSON.parse(this.responseText);
-// //     console.log(data2);
-// //     ülkeyiGöster(data2, 'neighbour'); //yukarıdaki boş classname burada işimize yaradı
-// //   });
-// // });
+btn.addEventListener('click', function () {
+  const country = document.getElementById("country").value;
+  ülkeBilgisiAl(country);
+  setTimeout(function(){
+    window.location.reload();
+ }, 8000);
+});
