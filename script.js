@@ -3,7 +3,7 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
-const ülkeyiGöster = function (data, className = '') {//! boş bir classname atandı 61. Satırdaki neighbour öğesini atabilmek için
+const ülkeyiGöster = function (data, className = '') {//! boş bir classname atandı 49. Satırdaki neighbour öğesini atabilmek için
   const languages = Object.values(data.languages); //! Burada bir değişken atayarak 16. Satırdaki Kodu dinamik yaptık
   const currencies = Object.values(data.currencies); //! Burada da 17. satırdaki kodu dinamik yapmak için her ülke atandığında [0]. elemanını almasını istedik
   const html = `
